@@ -20,7 +20,10 @@ function CartPage() {
     <div className="max-w-4xl px-4 py-8 mx-auto">
       <h1 className="mb-4 text-2xl font-bold">Shopping Cart</h1>
       {Object.keys(items).length === 0 ? (
-        <p className="text-center">Your cart is empty. <Link to="/" className="text-blue-500 underline">Continue shopping</Link></p>
+        <div className="flex flex-col items-center justify-center py-16">
+          <p className="mb-4 text-lg text-gray-600">Your cart is empty.</p>
+          <Link to="/" className="text-blue-500 underline">Continue shopping</Link>
+        </div>
       ) : (
         <>
           {Object.values(items).map((item) => (
